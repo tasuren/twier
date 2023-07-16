@@ -1,0 +1,12 @@
+{
+  "Apache-2.0 OR MIT": [
+    {
+      "name": "@tauri-apps/api",
+      "version": "1.4.0",
+      "path": "/Users/tasuren/Documents/src/app/twier/node_modules/.pnpm/@tauri-apps+api@1.4.0/node_modules/@tauri-apps/api",
+      "license": "Apache-2.0 OR MIT",
+      "homepage": "https://github.com/tauri-apps/tauri#readme",
+      "description": "Tauri API definitions"
+    }
+  ]
+}
