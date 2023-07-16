@@ -1,7 +1,10 @@
-# Tauri + Vanilla TS
+# twier
+A __native__ Twitter client dedicated to *tweeting*.  
+This is a Twitter client that allows you to use only the tweet and settings screens.  
+The mechanism is simple: the menu on the Twitter website is simply erased.
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Typescript.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+## Acknowledgment
+- [tauri](https://tauri.app)
+- [JavaScript libraries in use](https://github.com/tasuren/twier/tree/main/licenses/js.csv)
+- [Rust libraries in use](https://github.com/tasuren/twier/tree/main/licenses/rust.csv)
+- The icon from [いらすとや](https://www.irasutoya.com)
