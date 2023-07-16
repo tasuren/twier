@@ -6,7 +6,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "twier",
+    "productName": "Twier",
     "version": "0.1.0"
   },
   "tauri": {
@@ -34,7 +34,7 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "twier",
+        "title": "wier",
         "width": 600,
         "height": 400,
         "url": "https://twitter.com/settings"
