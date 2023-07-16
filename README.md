@@ -2,7 +2,9 @@
 A __native__ Twitter client dedicated to *tweeting*.  
 This is a Twitter client that allows you to use only the tweet and settings screens.  
 The mechanism is simple: the menu on the Twitter website is simply erased.
-<p><img width="712" alt="The tweeting screen of Twier" src="https://github.com/tasuren/twier/assets/45121209/5e211822-0274-49a6-8971-2499fa79570f"></p>
+<p>
+  <img width="712" alt="スクリーンショット 2023-07-16 18 50 09" src="https://github.com/tasuren/twier/assets/45121209/1468093d-b773-4b25-ac75-7d8c19dc5dc9">
+</p>
 
 ## Acknowledgment
 - [tauri](https://tauri.app)
