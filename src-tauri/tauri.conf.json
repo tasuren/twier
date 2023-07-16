@@ -2,21 +2,16 @@
   "build": {
     "beforeDevCommand": "pnpm dev",
     "beforeBuildCommand": "pnpm build",
-    "devPath": "http://localhost:1420",
-    "distDir": "../dist",
-    "withGlobalTauri": true
+    "devPath": "https://twitter.com",
+    "distDir": "../dist"
   },
   "package": {
     "productName": "twier",
-    "version": "0.0.0"
+    "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
-      "all": false,
-      "shell": {
-        "all": false,
-        "open": true
-      }
+      "all": false
     },
     "bundle": {
       "active": true,
@@ -40,7 +35,7 @@
         "title": "twier",
         "width": 600,
         "height": 400,
-        "url": "https://twitter.com/settings/account"
+        "url": "https://twitter.com/settings"
       }
     ]
   }

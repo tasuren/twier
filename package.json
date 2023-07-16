@@ -1,22 +1,22 @@
 {
-  "name": "twier",
+  "name": "twier-frontend",
+  "version": "0.1.0",
+  "description": "The frontend for twier",
+  "author": "Takagi Tasuku <tasuren@outlook.jp> (https://tasuren.jp/)",
+  "license": "BSD-4-Clause",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "dev": "rspack build --watch",
+    "build": "tsc && rspack build",
     "tauri": "tauri"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.4.0"
   },
   "devDependencies": {
-    "@rspack/cli": "^0.2.5",
+    "@rspack/cli": "^0.2.7",
     "@tauri-apps/cli": "^1.4.0",
-    "@types/node": "^20.4.1",
-    "typescript": "^4.8.2",
-    "vite": "^4.2.1"
+    "@types/node": "^20.4.2",
+    "typescript": "^5.1.6"
   }
 }
