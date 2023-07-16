@@ -52,18 +52,41 @@ function removeNavigation() {
 
 
 /** ページ読み込み時にすべき一通りの改造を済ませます。 */
-function setup() {
+function setup(containerElement: HTMLDivElement) {
+  // アプリ仕様に作り替える。
   removeHomeLink(); removeNavigation();
+  // 設定画面に謝辞へのリンクを載せる。
+  if (!document.getElementById("twier-info"))
+    for (let element of containerElement.getElementsByTagName("div"))
+      if (element.getAttribute("role") == "tablist") {
+        let division = document.createElement("div");
+        division.className = element.className;
+        division.id = "twier-info";
+
+        let anchor = document.createElement("a");
+        anchor.href = "https://github.com/tasuren/twier/blob/main/README.md#acknowledgment";
+        if (element.lastElementChild)
+          anchor.className = element.lastElementChild.className;
+        anchor.innerText = "Twier Acknowledgements"
+        anchor.style.color = "red";
+        anchor.style.paddingTop = "10px";
+        anchor.style.paddingLeft = "30px";
+
+        division.appendChild(anchor);
+        element.appendChild(division);
+        break;
+      };
 };
 
 
-if (!location.pathname.includes("flow/login")) {
+if (!location.pathname.includes("flow/login")
+    && !location.hostname.includes("github.com")) {
   // 初回起動時はツイート画面を表示させる。
   window.addEventListener("load", () => {
     addListenerOnContainerCreated((element) => {
-      setup();
+      setup(element);
       new MutationObserver(() => {
-        setup();
+        setup(element);
       }).observe(element, {subtree: true, childList: true});
     });
   });
