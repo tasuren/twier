@@ -7,7 +7,7 @@
   },
   "package": {
     "productName": "Twier",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "tauri": {
     "allowlist": {
@@ -40,6 +40,10 @@
         "height": 400,
         "url": "https://twitter.com/settings"
       }
-    ]
+    ],
+    "systemTray": {
+      "iconPath": "icons/icon.ico",
+      "title": "Oh, hi."
+    }
   }
 }
