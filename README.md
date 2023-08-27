@@ -8,6 +8,6 @@ The mechanism is simple: the menu on the X website is simply erased.
 
 ## Acknowledgment
 - [tauri](https://tauri.app)
-- [JavaScript libraries in use](https://github.com/tasuren/twier/tree/main/licenses/js.csv)
+- [JavaScript libraries in use](https://github.com/tasuren/twier/tree/main/licenses/js.json)
 - [Rust libraries in use](https://github.com/tasuren/twier/tree/main/licenses/rust.csv)
 - The icon from [いらすとや](https://www.irasutoya.com)
