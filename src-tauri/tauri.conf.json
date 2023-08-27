@@ -18,7 +18,7 @@
       "targets": "all",
       "identifier": "jp.tasuren.twier",
       "copyright": "(c) 2023 Takagi Tasuku",
-      "shortDescription": "A native Twitter client dedicated to tweeting.",
+      "shortDescription": "A native X client dedicated to posting.",
       "category": "SocialNetworking",
       "icon": [
         "icons/32x32.png",
