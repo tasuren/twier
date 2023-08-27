@@ -32,9 +32,9 @@ function openTweetBox() {
 
 function removeHomeLink() {
   for (let element of document.getElementsByTagName("a"))
-    if (element.getAttribute("aria-label") == "Twitter") {
-      console.debug("Remove home link.")
-      element.remove();
+    if (element.getAttribute("aria-label") == "X") {
+      console.debug("Remove home link.");
+      element.onclick = () => false;
       return true;
     };
   return false;
