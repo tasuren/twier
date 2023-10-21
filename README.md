@@ -1,3 +1,4 @@
+![GitHub all releases](https://img.shields.io/github/downloads/tasuren/twier/total)
 # Twier
 This is a native X client that only allows you to post and use settings.  
 The mechanism is simple: the menu on the X website is simply erased.
