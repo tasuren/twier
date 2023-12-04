@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   '@rspack/cli':
-    specifier: ^0.4.0
-    version: 0.4.0(@rspack/core@0.4.0)(react-refresh@0.14.0)
+    specifier: ^0.4.1
+    version: 0.4.1(@rspack/core@0.4.0)(react-refresh@0.14.0)
   '@tauri-apps/cli':
     specifier: ^1.5.6
     version: 1.5.6
@@ -201,15 +201,15 @@ packages:
       '@rspack/binding-win32-x64-msvc': 0.4.0
     dev: true
 
-  /@rspack/cli@0.4.0(@rspack/core@0.4.0)(react-refresh@0.14.0):
-    resolution: {integrity: sha512-bP/DSyUA+qLVVx99cmyXlrCwyID9jmbMfsMwDrn0BmY3IoBFFquhw9/5K1QBBpwlWnjGtntqeZPyAmweZ2loKw==}
+  /@rspack/cli@0.4.1(@rspack/core@0.4.0)(react-refresh@0.14.0):
+    resolution: {integrity: sha512-qOVLdf0pUE3MN7NmlOD2ApZn5JDMyehrmrbBx7UGyAMlLH+0v5E1veXPDzTwrcS7bcXGuPLMi9tWzCxfpXavTA==}
     hasBin: true
     peerDependencies:
       '@rspack/core': '>=0.4.0'
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
       '@rspack/core': 0.4.0
-      '@rspack/dev-server': 0.4.0(@rspack/core@0.4.0)(react-refresh@0.14.0)
+      '@rspack/dev-server': 0.4.1(@rspack/core@0.4.0)(react-refresh@0.14.0)
       colorette: 2.0.19
       exit-hook: 3.2.0
       interpret: 3.1.1
@@ -257,13 +257,13 @@ packages:
       zod-validation-error: 1.2.0(zod@3.22.3)
     dev: true
 
-  /@rspack/dev-server@0.4.0(@rspack/core@0.4.0)(react-refresh@0.14.0):
-    resolution: {integrity: sha512-qi70BKcGspjlNpufF+AOf5MHbEGnumMtVTtWzdw8I4xDWr2AguesrOEgACHMJx/EZks9vtbSqepf4anYglvsng==}
+  /@rspack/dev-server@0.4.1(@rspack/core@0.4.0)(react-refresh@0.14.0):
+    resolution: {integrity: sha512-M+Wp4fg8PuBHW2Ou0gIAC0sv64VMfrvTPLDHl8KvifAeYrcGqNXzPeY5j1OGLcSqDiXTFHYjbypsIHZkqET7nQ==}
     peerDependencies:
       '@rspack/core': '*'
     dependencies:
       '@rspack/core': 0.4.0
-      '@rspack/plugin-react-refresh': 0.4.0(react-refresh@0.14.0)(webpack-dev-server@4.13.1)(webpack@5.76.0)
+      '@rspack/plugin-react-refresh': 0.4.1(react-refresh@0.14.0)(webpack-dev-server@4.13.1)(webpack@5.76.0)
       chokidar: 3.5.3
       connect-history-api-fallback: 2.0.0
       express: 4.18.1
@@ -291,8 +291,8 @@ packages:
       - webpack-plugin-serve
     dev: true
 
-  /@rspack/plugin-react-refresh@0.4.0(react-refresh@0.14.0)(webpack-dev-server@4.13.1)(webpack@5.76.0):
-    resolution: {integrity: sha512-yo2FXVj6P2HrBGIxBqqRJQzAdG6CrL0WFE+kQk/Uz+7Ct09nPvl7zRdHE1BUXHnSXIjrMJj4fRmd7hXsmtTHXQ==}
+  /@rspack/plugin-react-refresh@0.4.1(react-refresh@0.14.0)(webpack-dev-server@4.13.1)(webpack@5.76.0):
+    resolution: {integrity: sha512-Fo6MBu4JNGqyrLXHkKG3Jhor0CG9yuXhig/a4vfrMInmKBkAyOCc5QnlGflXlyPs4bWhdViaUbl0kJaU11NLZg==}
     peerDependencies:
       react-refresh: '>=0.10.0 <1.0.0'
     peerDependenciesMeta:
