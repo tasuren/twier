@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   '@rspack/cli':
-    specifier: ^0.4.2
-    version: 0.4.2(@rspack/core@0.4.0)
+    specifier: ^0.4.4
+    version: 0.4.4(@rspack/core@0.4.0)
   '@tauri-apps/cli':
     specifier: ^1.5.8
     version: 1.5.8
@@ -161,15 +161,15 @@ packages:
       '@rspack/binding-win32-x64-msvc': 0.4.0
     dev: true
 
-  /@rspack/cli@0.4.2(@rspack/core@0.4.0):
-    resolution: {integrity: sha512-9TnEmxqxJu6oW2wTQ+9pkPCM+PUHT2NOJ9iCvwTXz5izohM2ZTsG0BlCcpmUWqYn963P+NQdX1eiPd59NukHtQ==}
+  /@rspack/cli@0.4.4(@rspack/core@0.4.0):
+    resolution: {integrity: sha512-hLF91sDzeFde7Hm8VustRPsowd6g9Nf7uZ0CJugwxx4IE+zcKULHm74GkpLGsiPWlf18uuIX7GVOtobX2NyF6g==}
     hasBin: true
     peerDependencies:
       '@rspack/core': '>=0.4.0'
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
       '@rspack/core': 0.4.0
-      '@rspack/dev-server': 0.4.2(@rspack/core@0.4.0)
+      '@rspack/dev-server': 0.4.4(@rspack/core@0.4.0)
       colorette: 2.0.19
       exit-hook: 3.2.0
       interpret: 3.1.1
@@ -212,13 +212,13 @@ packages:
       zod-validation-error: 1.2.0(zod@3.22.3)
     dev: true
 
-  /@rspack/dev-server@0.4.2(@rspack/core@0.4.0):
-    resolution: {integrity: sha512-YxCnTHAmOXLxrFhuzEJjwkKVST1iu8k+wGbv4jA0UjCFP1fBNPuPq780Hfi8tRopdsNo6tVtnhA/01wlhArTcQ==}
+  /@rspack/dev-server@0.4.4(@rspack/core@0.4.0):
+    resolution: {integrity: sha512-mvlUp3DrZY7RwRIPpEPtqpFbut6x3eRc+F+Vj4c9IABX/OCdxS57xJM3yPZM4CH7H4VCgikWCiJEzszxoYjISA==}
     peerDependencies:
       '@rspack/core': '*'
     dependencies:
       '@rspack/core': 0.4.0
-      '@rspack/plugin-react-refresh': 0.4.2
+      '@rspack/plugin-react-refresh': 0.4.4
       chokidar: 3.5.3
       connect-history-api-fallback: 2.0.0
       express: 4.18.1
@@ -241,8 +241,8 @@ packages:
       - webpack-cli
     dev: true
 
-  /@rspack/plugin-react-refresh@0.4.2:
-    resolution: {integrity: sha512-NMEyODrRZKDjMsoj8H0g7IMUjBBWB9CtTc0LWRbAMTEPf1pat+aAlhbRxYys7TE1VyREg4cWH7ON0FAGbfh5MA==}
+  /@rspack/plugin-react-refresh@0.4.4:
+    resolution: {integrity: sha512-AWC1VirWqKalVJpUi0i09cjYf7bfSG0qCoMNOym45bs9D2Hi3mxqrGEaMupTfkaSDdmJ/9VsUgUCHpgxAshJuw==}
     peerDependencies:
       react-refresh: '>=0.10.0 <1.0.0'
     peerDependenciesMeta:
