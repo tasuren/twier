@@ -1,12 +1,61 @@
 {
-  "Apache-2.0 OR MIT": [
-    {
-      "name": "@tauri-apps/api",
-      "version": "1.4.0",
-      "path": "/Users/tasuren/Documents/src/app/twier/node_modules/.pnpm/@tauri-apps+api@1.4.0/node_modules/@tauri-apps/api",
-      "license": "Apache-2.0 OR MIT",
-      "homepage": "https://github.com/tauri-apps/tauri#readme",
-      "description": "Tauri API definitions"
-    }
-  ]
+  "@rspack/cli@0.4.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/web-infra-dev/rspack",
+    "path": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@rspack/cli",
+    "licenseFile": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@rspack/cli/LICENSE"
+  },
+  "@tauri-apps/api@1.5.3": {
+    "licenses": "Apache-2.0 OR MIT",
+    "repository": "https://github.com/tauri-apps/tauri",
+    "path": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@tauri-apps/api",
+    "licenseFile": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@tauri-apps/api/README.md"
+  },
+  "@tauri-apps/cli@1.5.9": {
+    "licenses": "Apache-2.0 OR MIT",
+    "repository": "https://github.com/tauri-apps/tauri",
+    "path": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@tauri-apps/cli",
+    "licenseFile": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@tauri-apps/cli/README.md"
+  },
+  "@types/eslint-scope@3.7.7": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@types/eslint-scope",
+    "licenseFile": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@types/eslint-scope/LICENSE"
+  },
+  "@types/eslint@8.56.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@types/eslint",
+    "licenseFile": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@types/eslint/LICENSE"
+  },
+  "@types/node@20.10.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@types/node",
+    "licenseFile": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/@types/node/LICENSE"
+  },
+  "eslint-scope@5.1.1": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/eslint/eslint-scope",
+    "path": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/eslint-scope",
+    "licenseFile": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/eslint-scope/LICENSE"
+  },
+  "twier-frontend@0.1.1": {
+    "licenses": "UNLICENSED",
+    "private": true,
+    "publisher": "Takagi Tasuku",
+    "email": "tasuren@outlook.jp",
+    "url": "https://tasuren.jp/",
+    "path": "/Users/tasuren/Codebases/me/app/gui/twier",
+    "licenseFile": "/Users/tasuren/Codebases/me/app/gui/twier/LICENSE"
+  },
+  "typescript@5.3.3": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/Microsoft/TypeScript",
+    "publisher": "Microsoft Corp.",
+    "path": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/typescript",
+    "licenseFile": "/Users/tasuren/Codebases/me/app/gui/twier/node_modules/typescript/LICENSE.txt"
+  }
 }
+
