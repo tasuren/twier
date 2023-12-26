@@ -32,7 +32,7 @@ fn main() {
                 }
                 ctx
             }
-            #[cfg(target_os = "windows")]
+            #[cfg(not(target_os = "macos"))]
             generate_context!()
         })
         .expect("error while running tauri application");
