@@ -2,7 +2,7 @@
   "build": {
     "beforeDevCommand": "pnpm dev",
     "beforeBuildCommand": "pnpm build",
-    "devPath": "https://twitter.com",
+    "devPath": "https://x.com",
     "distDir": "../dist"
   },
   "package": {
@@ -38,7 +38,7 @@
         "title": "Twier",
         "width": 600,
         "height": 400,
-        "url": "https://twitter.com/settings"
+        "url": "https://x.com/settings"
       }
     ],
     "systemTray": {
