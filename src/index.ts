@@ -1,5 +1,6 @@
-const ORIGIN = "https://twitter.com";
+const ORIGIN = "https://x.com";
 const SETTING_PATH = "/settings";
+
 let makeUrl = (path: string) => `${ORIGIN}${path}`;
 
 

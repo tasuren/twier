@@ -1,8 +1,25 @@
 const path = require('path');
 
 module.exports = {
-  entry: {
-    main: './src/main.ts',
+  module: {
+    rules: [      
+      {
+        use: [
+          {
+            loader: "builtin:swc-loader",
+            options: {
+              sourceMap: true,
+              jsc: {
+                parser: {
+                  syntax: "typescript",
+                  tsx: false
+                }
+              }
+            }
+          }
+        ]
+      },
+    ]
   },
   output: {
     filename: 'main.js',
