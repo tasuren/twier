@@ -19,6 +19,6 @@
     "@rspack/cli": "^0.5.5",
     "@tauri-apps/cli": "^1.5.10",
     "@types/node": "^20.11.20",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   }
 }
