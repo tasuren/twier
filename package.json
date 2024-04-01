@@ -16,7 +16,7 @@
     "@tauri-apps/api": "^1.5.3"
   },
   "devDependencies": {
-    "@rspack/cli": "^0.5.8",
+    "@rspack/cli": "^0.5.9",
     "@tauri-apps/cli": "^1.5.11",
     "@types/node": "^20.11.20",
     "typescript": "^5.4.3"
