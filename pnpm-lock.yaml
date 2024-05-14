@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@tauri-apps/api':
-    specifier: ^1.5.4
-    version: 1.5.4
+    specifier: ^1.5.5
+    version: 1.5.5
 
 devDependencies:
   '@rspack/cli':
@@ -263,8 +263,8 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@tauri-apps/api@1.5.4:
-    resolution: {integrity: sha512-LKYae9URbdEdbHrOXBeXb/lZgVyWTX0E98rSFBuQlmkLr8OeG+akuE41PfLjBVyk1Q+fq7wxo4ieenLSMUAUhA==}
+  /@tauri-apps/api@1.5.5:
+    resolution: {integrity: sha512-Jgwj8BK/9YXZNzcqVDk1Al7+u5V9sWrZ8MhV41A1AKgJaicHuqlkc/qdx06sNDXvc+qprTPpBAaqnt891qOUIQ==}
     engines: {node: '>= 14.6.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
     dev: false
 
