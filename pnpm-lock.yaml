@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@tauri-apps/api':
-    specifier: ^1.5.5
-    version: 1.5.5
+    specifier: ^1.5.6
+    version: 1.5.6
 
 devDependencies:
   '@rspack/cli':
@@ -263,8 +263,8 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@tauri-apps/api@1.5.5:
-    resolution: {integrity: sha512-Jgwj8BK/9YXZNzcqVDk1Al7+u5V9sWrZ8MhV41A1AKgJaicHuqlkc/qdx06sNDXvc+qprTPpBAaqnt891qOUIQ==}
+  /@tauri-apps/api@1.5.6:
+    resolution: {integrity: sha512-LH5ToovAHnDVe5Qa9f/+jW28I6DeMhos8bNDtBOmmnaDpPmJmYLyHdeDblAWWWYc7KKRDg9/66vMuKyq0WIeFA==}
     engines: {node: '>= 14.6.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
     dev: false
 
@@ -463,12 +463,6 @@ packages:
     resolution: {integrity: sha512-y6PJDYN4xYBxwd22l+OVH35N+1fCYWiuC3aiP2SlXVE6Lo7SS+rSx9r89hLxrP4pn6n1lBGhHJ12pj3F3Mpttw==}
     dependencies:
       '@types/node': 20.12.12
-    dev: true
-
-  /@types/node@20.12.10:
-    resolution: {integrity: sha512-Eem5pH9pmWBHoGAT8Dr5fdc5rYA+4NAovdM4EktRPVAAiJhmWWfQrA0cFhAbOsQdSfIHjAud6YdkbL69+zSKjw==}
-    dependencies:
-      undici-types: 5.26.5
     dev: true
 
   /@types/node@20.12.12:
@@ -1550,7 +1544,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.12.10
+      '@types/node': 20.12.12
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
