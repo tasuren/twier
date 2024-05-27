@@ -12,7 +12,7 @@ version = "0.1.2"
 tauri-build = { version = "1.5.2", features = [] }
 
 [dependencies]
-tauri = { version = "1.6.6", features = ["system-tray"] }
+tauri = { version = "1.6.7", features = ["system-tray"] }
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem
