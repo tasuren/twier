@@ -1,8 +1,8 @@
 const ORIGIN = "https://x.com";
 const SETTING_PATH = "/settings";
+const TWIER_ID = "twier-enabled";
 
 let makeUrl = (path: string) => `${ORIGIN}${path}`;
-
 
 /** mainタグが作成されるまで待機します。 */
 function addListenerOnContainerCreated(
@@ -12,14 +12,13 @@ function addListenerOnContainerCreated(
     for (let element of document.getElementsByTagName("main")) {
       mainObserver.disconnect();
       target(element.parentElement as HTMLDivElement);
-    };
+    }
   });
-  mainObserver.observe(
-    document.getElementsByTagName("html")[0],
-    {subtree: true, childList: true}
-  );
-};
-
+  mainObserver.observe(document.getElementsByTagName("html")[0], {
+    subtree: true,
+    childList: true,
+  });
+}
 
 function openTweetBox() {
   for (let element of document.getElementsByTagName("a"))
@@ -27,9 +26,9 @@ function openTweetBox() {
       console.debug("Open tweet box.");
       element.click();
       return true;
-    };
+    }
   return false;
-};
+}
 
 function removeHomeLink() {
   for (let element of document.getElementsByTagName("a"))
@@ -37,9 +36,9 @@ function removeHomeLink() {
       console.debug("Remove home link.");
       element.onclick = () => false;
       return true;
-    };
+    }
   return false;
-};
+}
 
 function removeNavigation() {
   for (let element of document.getElementsByTagName("nav"))
@@ -47,15 +46,15 @@ function removeNavigation() {
       console.debug("Remove navigation");
       element.remove();
       return true;
-    };
+    }
   return false;
-};
-
+}
 
 /** ページ読み込み時にすべき一通りの改造を済ませます。 */
 function setup(containerElement: HTMLDivElement) {
   // アプリ仕様に作り替える。
-  removeHomeLink(); removeNavigation();
+  removeHomeLink();
+  removeNavigation();
   // 設定画面に謝辞へのリンクを載せる。
   if (!document.getElementById("twier-info"))
     for (let element of containerElement.getElementsByTagName("div"))
@@ -65,10 +64,11 @@ function setup(containerElement: HTMLDivElement) {
         division.id = "twier-info";
 
         let anchor = document.createElement("a");
-        anchor.href = "https://github.com/tasuren/twier/blob/main/README.md#acknowledgment";
+        anchor.href =
+          "https://github.com/tasuren/twier/blob/main/README.md#acknowledgment";
         if (element.lastElementChild)
           anchor.className = element.lastElementChild.className;
-        anchor.innerText = "Twier Acknowledgements"
+        anchor.innerText = "Twier Acknowledgements";
         anchor.style.color = "red";
         anchor.style.paddingTop = "10px";
         anchor.style.paddingLeft = "30px";
@@ -76,23 +76,27 @@ function setup(containerElement: HTMLDivElement) {
         division.appendChild(anchor);
         element.appendChild(division);
         break;
-      };
-};
+      }
+}
 
-
-if (!location.pathname.includes("flow/login")
-    && !location.hostname.includes("github.com")) {
-  // 初回起動時はツイート画面を表示させる。
+if (
+  !location.pathname.includes("flow/login") &&
+  !location.hostname.includes("github.com")
+) {
+  // ウェブページが変更される度に改ざんを実行する。
   window.addEventListener("load", () => {
     addListenerOnContainerCreated((element) => {
       setup(element);
+
       new MutationObserver(() => {
         setup(element);
-      }).observe(element, {subtree: true, childList: true});
+      }).observe(element, { subtree: true, childList: true });
     });
   });
 
   // ここでページ遷移ループが起こるように見えるが、動的なページ遷移時はこのスクリプトは呼ばれないため大丈夫。
-  if (location.pathname != SETTING_PATH)
-    location.href = makeUrl(SETTING_PATH);
-};
+  if (location.search.search.toString().includes(TWIER_ID)) {
+    console.log("あいうえお", location.search);
+    location.href = makeUrl(`${SETTING_PATH}?${TWIER_ID}`);
+  }
+}
