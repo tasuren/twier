@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   '@rspack/cli':
-    specifier: ^0.7.0
-    version: 0.7.0(@rspack/core@0.4.5)(webpack@5.89.0)
+    specifier: ^0.7.2
+    version: 0.7.2(@rspack/core@0.4.5)(webpack@5.89.0)
   '@tauri-apps/cli':
     specifier: ^1.5.14
     version: 1.5.14
@@ -185,15 +185,15 @@ packages:
       '@rspack/binding-win32-x64-msvc': 0.4.5
     dev: true
 
-  /@rspack/cli@0.7.0(@rspack/core@0.4.5)(webpack@5.89.0):
-    resolution: {integrity: sha512-6A4h9d226nUpsdKmDAhwSw8Jb/aW7sb7I5MK29pN0CHxlni8ywK207YmVE2u/O6Mww+APgJZwEJNZrjyt1eO4w==}
+  /@rspack/cli@0.7.2(@rspack/core@0.4.5)(webpack@5.89.0):
+    resolution: {integrity: sha512-rFOG+q54O/WvxQ6QFdAk1zVUa5wVrAmbONhrx+LOpYPvQ1CL4h4dqD2UbNKFDl0P8pzjmN37ZJrmICk+vLQ6rA==}
     hasBin: true
     peerDependencies:
       '@rspack/core': '>=0.4.0'
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
       '@rspack/core': 0.4.5
-      '@rspack/dev-server': 0.7.0(@rspack/core@0.4.5)(webpack@5.89.0)
+      '@rspack/dev-server': 0.7.2(@rspack/core@0.4.5)(webpack@5.89.0)
       colorette: 2.0.19
       exit-hook: 3.2.0
       interpret: 3.1.1
@@ -233,8 +233,8 @@ packages:
       zod-validation-error: 1.3.1(zod@3.22.4)
     dev: true
 
-  /@rspack/dev-server@0.7.0(@rspack/core@0.4.5)(webpack@5.89.0):
-    resolution: {integrity: sha512-szTxvkEK3LB7/tZsS9z23gIFOSgn2oVdqOkhCvJwGmpa9NqZbThPQWOcEzRlBQumJ2bQCtYIIaW4cSscHpKZlg==}
+  /@rspack/dev-server@0.7.2(@rspack/core@0.4.5)(webpack@5.89.0):
+    resolution: {integrity: sha512-+jZ3YUKHd71/0jDg0OJ2h0mEJD12tjNWFm9MzuX90CFG1qWivnZq8EbGMCvdYY9wBzknuDhZOF+pvbofu0a4fQ==}
     peerDependencies:
       '@rspack/core': '*'
     dependencies:
@@ -463,12 +463,6 @@ packages:
     resolution: {integrity: sha512-y6PJDYN4xYBxwd22l+OVH35N+1fCYWiuC3aiP2SlXVE6Lo7SS+rSx9r89hLxrP4pn6n1lBGhHJ12pj3F3Mpttw==}
     dependencies:
       '@types/node': 20.14.2
-    dev: true
-
-  /@types/node@20.14.0:
-    resolution: {integrity: sha512-5cHBxFGJx6L4s56Bubp4fglrEpmyJypsqI6RgzMfBHWUJQGWAAi8cWcgetEbZXHYXo9C2Fa4EEds/uSyS4cxmA==}
-    dependencies:
-      undici-types: 5.26.5
     dev: true
 
   /@types/node@20.14.2:
@@ -1552,7 +1546,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.14.0
+      '@types/node': 20.14.2
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
