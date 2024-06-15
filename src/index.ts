@@ -55,10 +55,11 @@ function setup(containerElement: HTMLDivElement) {
   // アプリ仕様に作り替える。
   removeHomeLink();
   removeNavigation();
+
   // 設定画面に謝辞へのリンクを載せる。
   if (!document.getElementById("twier-info"))
     for (let element of containerElement.getElementsByTagName("div"))
-      if (element.getAttribute("role") == "tablist") {
+      if (element.role == "tablist") {
         let division = document.createElement("div");
         division.className = element.className;
         division.id = "twier-info";
@@ -75,6 +76,7 @@ function setup(containerElement: HTMLDivElement) {
 
         division.appendChild(anchor);
         element.appendChild(division);
+
         break;
       }
 }
@@ -86,6 +88,7 @@ if (
   // ウェブページが変更される度に改ざんを実行する。
   window.addEventListener("load", () => {
     addListenerOnContainerCreated((element) => {
+      // Macなら信号とロゴが被らないようにpaddingを配置する。
       setup(element);
 
       new MutationObserver(() => {
@@ -96,7 +99,6 @@ if (
 
   // ここでページ遷移ループが起こるように見えるが、動的なページ遷移時はこのスクリプトは呼ばれないため大丈夫。
   if (location.search.search.toString().includes(TWIER_ID)) {
-    console.log("あいうえお", location.search);
     location.href = makeUrl(`${SETTING_PATH}?${TWIER_ID}`);
   }
 }

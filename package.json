@@ -9,16 +9,17 @@
     "dev": "rspack build --watch",
     "build": "tsc && rspack build",
     "all-licenses": "pnpm licenses ls --prod --json > licenses/js.json && cargo license --tsv --current-dir src-tauri > licenses/rust.csv",
-    "icons": "tauri icon icon/mac/main.png --output src-tauri/icons/mac && tauri icon icon/main.png --output src-tauri/icons",
+    "icons": "tauri icon icon/main.png --output src-tauri/icons",
     "tauri": "tauri"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.5.6"
   },
   "devDependencies": {
-    "@rspack/cli": "^0.7.2",
+    "@rspack/cli": "^0.7.3",
     "@tauri-apps/cli": "^1.5.14",
     "@types/node": "^20.14.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   }
 }

@@ -4,6 +4,8 @@ use std::env;
 
 use tauri::{command, generate_context, generate_handler, Builder};
 
+mod injector;
+
 /// The user agent to behave normal browser.
 #[cfg(target_os = "macos")]
 const USER_AGENT: &str = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36";
@@ -18,13 +20,7 @@ fn main() {
     Builder::default()
         .invoke_handler(generate_handler![print])
         .on_page_load(|window, _| {
-            // Inject the script to modify x web page.
-            #[cfg(debug_assertions)]
-            window
-                .eval(&std::fs::read_to_string("../dist/main.js").unwrap())
-                .unwrap();
-            #[cfg(not(debug_assertions))]
-            window.eval(include_str!("../../dist/main.js")).unwrap();
+            injector::inject(&window);
 
             if env::var("DEVTOOLS")
                 .ok()
