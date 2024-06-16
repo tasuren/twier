@@ -23,6 +23,7 @@
       "active": true,
       "targets": "all",
       "identifier": "jp.tasuren.twier",
+      "publisher": "Takagi Tasuku",
       "copyright": "(c) 2023 Takagi Tasuku",
       "shortDescription": "A native X client dedicated to posting.",
       "category": "SocialNetworking",
