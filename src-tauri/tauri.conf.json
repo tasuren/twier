@@ -6,8 +6,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "Twier",
-    "version": "0.1.3"
+    "productName": "Twier"
   },
   "tauri": {
     "allowlist": {
