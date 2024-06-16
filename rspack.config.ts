@@ -26,6 +26,7 @@ const CONFIG: Configuration = {
     filename: "main.js",
     path: "./dist",
   },
+  performance: { hints: false },
   devtool: "inline-source-map",
 };
 

@@ -1,6 +1,6 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-use std::env;
+use std::{env, process::Command};
 
 use tauri::{command, generate_context, generate_handler, Builder};
 
@@ -10,6 +10,24 @@ mod injector;
 #[cfg(target_os = "macos")]
 const USER_AGENT: &str = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36";
 
+/// To open directory. The reason this necessary is this: https://github.com/tauri-apps/tauri/issues/5893
+#[command]
+fn open_directory(path: String) {
+    #[cfg(target_os = "windows")]
+    let command_name = "explorer";
+    #[cfg(target_os = "macos")]
+    let command_name = "open";
+    #[cfg(target_os = "linux")]
+    let command_name = "xdg-open";
+
+    {
+        Command::new(command_name)
+            .arg(path)
+            .spawn()
+            .expect("Failed to open folder");
+    }
+}
+
 /// Just printing to debug.
 #[command]
 fn print(text: String) {
@@ -18,7 +36,7 @@ fn print(text: String) {
 
 fn main() {
     Builder::default()
-        .invoke_handler(generate_handler![print])
+        .invoke_handler(generate_handler![print, open_directory])
         .on_page_load(|window, _| {
             injector::inject(&window);
 

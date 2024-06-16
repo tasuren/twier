@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "rspack build --watch",
     "build": "tsc && rspack build",
-    "all-licenses": "pnpm licenses ls --prod --json > licenses/js.json && cargo license --tsv --current-dir src-tauri > licenses/rust.csv",
+    "all-licenses": "mkdir -p dist/licenses && pnpm licenses ls --prod --json > dist/licenses/js.json && cargo license --tsv --current-dir src-tauri > dist/licenses/rust.csv",
     "icons": "tauri icon icon/main.png --output src-tauri/icons",
     "tauri": "tauri"
   },

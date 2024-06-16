@@ -20,6 +20,7 @@ function addListenerOnContainerCreated(
   });
 }
 
+/*
 function openTweetBox() {
   for (let element of document.getElementsByTagName("a"))
     if (element.getAttribute("data-testid") == "SideNav_NewTweet_Button") {
@@ -29,6 +30,7 @@ function openTweetBox() {
     }
   return false;
 }
+*/
 
 function removeHomeLink() {
   for (let element of document.getElementsByTagName("a"))
@@ -50,13 +52,8 @@ function removeNavigation() {
   return false;
 }
 
-/** ページ読み込み時にすべき一通りの改造を済ませます。 */
-function setup(containerElement: HTMLDivElement) {
-  // アプリ仕様に作り替える。
-  removeHomeLink();
-  removeNavigation();
-
-  // 設定画面に謝辞へのリンクを載せる。
+/** 設定画面にサードパーティライセンスを表示するボタンを付ける。 */
+function addThirdPartyLicensesButton(containerElement: HTMLDivElement) {
   if (!document.getElementById("twier-info"))
     for (let element of containerElement.getElementsByTagName("div"))
       if (element.role == "tablist") {
@@ -67,18 +64,28 @@ function setup(containerElement: HTMLDivElement) {
         let anchor = document.createElement("a");
         anchor.href =
           "https://github.com/tasuren/twier/blob/main/README.md#acknowledgment";
-        if (element.lastElementChild)
+        if (element.lastElementChild) {
           anchor.className = element.lastElementChild.className;
+          anchor.setAttribute(
+            "style",
+            element.lastElementChild.getAttribute("style") as string
+          );
+        }
         anchor.innerText = "Twier Acknowledgements";
-        anchor.style.color = "red";
-        anchor.style.paddingTop = "10px";
-        anchor.style.paddingLeft = "30px";
 
         division.appendChild(anchor);
         element.appendChild(division);
 
         break;
       }
+}
+
+/** ページ読み込み時にすべき一通りの改造を済ませます。 */
+function setup(containerElement: HTMLDivElement) {
+  // アプリ仕様に作り替える。
+  removeHomeLink();
+  removeNavigation();
+  addThirdPartyLicensesButton(containerElement);
 }
 
 if (
