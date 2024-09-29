@@ -3,6 +3,8 @@
 This is a native X client that hides the timeline.
 The mechanism is simple: the menu on the X website is simply erased.
 
+You can download this software from [Releases](https://github.com/tasuren/twier/releases).
+
 <img
   width="712"
   alt="Screenshot of this application, screen shot of creating a post"
