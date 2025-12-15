@@ -1,5 +1,5 @@
 [package]
-name = "twier-backend"
+name = "twier"
 authors = ["Takagi Tasuku <tasuren@outlook.jp>"]
 license = "GPL-3.0-or-later"
 publish = false
