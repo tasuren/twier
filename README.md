@@ -36,6 +36,11 @@ You can put password and press "Always Allow" button to prevent this popup from 
 
 Unfortunately, I don't know how to disable this alert...
 
+## Acknowledgment
+
+- [JavaScript dependencies](third-party-licenses/js.json)
+- [Rust dependencies](third-party-licenses/rust.csv)
+
 ## License
 
 This project is licensed under the [GPL 3.0 or later License](LICENSE).

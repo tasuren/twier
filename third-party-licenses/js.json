@@ -1,0 +1,9 @@
+{
+  "@tauri-apps/api@2.9.1": {
+    "licenses": "Apache-2.0 OR MIT",
+    "repository": "https://github.com/tauri-apps/tauri",
+    "path": "/Users/tasuren/Codebases/me/twier/node_modules/@tauri-apps/api",
+    "licenseFile": "/Users/tasuren/Codebases/me/twier/node_modules/@tauri-apps/api/README.md"
+  }
+}
+

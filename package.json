@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "rspack build --watch",
         "build": "rspack build",
-        "all-licenses": "mkdir -p dist/licenses && pnpm licenses ls --prod --json > dist/licenses/js.json && cargo license --tsv --current-dir src-tauri > dist/licenses/rust.csv",
+        "all-licenses": "mkdir -p third-party-licenses && bun license-checker --production --json > third-party-licenses/js.json && cargo license --tsv --current-dir src-tauri > third-party-licenses/rust.csv",
         "icons": "tauri icon icon/main.png --output src-tauri/icons",
         "tauri": "tauri",
         "cargo": "cargo +nightly -Z unstable-options -C src-tauri"
@@ -19,6 +19,7 @@
         "@rspack/cli": "^1.6.7",
         "@tauri-apps/cli": "^2.9.6",
         "@types/node": "^25.0.2",
+        "license-checker": "^25.0.1",
         "ts-node": "^10.9.2",
         "typescript": "^5.9.3"
     }
