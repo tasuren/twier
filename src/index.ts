@@ -73,7 +73,7 @@ function addThirdPartyLicensesButton(containerElement: HTMLDivElement) {
 						element.lastElementChild.getAttribute("style") as string,
 					);
 				}
-				anchor.innerText = "See twier repository";
+				anchor.innerText = "Twier acknowledgements";
 
 				division.appendChild(anchor);
 				element.appendChild(division);
