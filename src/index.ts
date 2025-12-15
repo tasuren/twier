@@ -53,6 +53,9 @@ function removeNavigation() {
 }
 
 /** 設定画面にリポジトリへのリンクを表示するボタンを付ける。 */
+const ACKNOWLEDGEMENTS =
+	"https://github.com/tasuren/twier/blob/6fb16eecff20acbf1031d52252b49e42a005532d/README.md#acknowledgments";
+
 function addThirdPartyLicensesButton(containerElement: HTMLDivElement) {
 	if (!document.getElementById("twier-info"))
 		for (const element of containerElement.getElementsByTagName("div"))
@@ -62,7 +65,7 @@ function addThirdPartyLicensesButton(containerElement: HTMLDivElement) {
 				division.id = "twier-info";
 
 				const anchor = document.createElement("a");
-				anchor.href = "https://github.com/tasuren/twier/blob/main/README.md";
+				anchor.href = ACKNOWLEDGEMENTS;
 				if (element.lastElementChild) {
 					anchor.className = element.lastElementChild.className;
 					anchor.setAttribute(
