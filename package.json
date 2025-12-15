@@ -1,24 +1,25 @@
 {
-  "name": "twier-frontend",
-  "description": "The frontend for twier",
-  "author": "Takagi Tasuku <tasuren@outlook.jp> (https://tasuren.jp/)",
-  "license": "BSD-4-Clause",
-  "private": true,
-  "scripts": {
-    "dev": "rspack build --watch",
-    "build": "tsc && rspack build",
-    "all-licenses": "mkdir -p dist/licenses && pnpm licenses ls --prod --json > dist/licenses/js.json && cargo license --tsv --current-dir src-tauri > dist/licenses/rust.csv",
-    "icons": "tauri icon icon/main.png --output src-tauri/icons",
-    "tauri": "tauri"
-  },
-  "dependencies": {
-    "@tauri-apps/api": "^1.6.0"
-  },
-  "devDependencies": {
-    "@rspack/cli": "^0.7.5",
-    "@tauri-apps/cli": "^1.6.0",
-    "@types/node": "^22.0.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
-  }
+    "name": "twier-frontend",
+    "description": "The frontend for twier",
+    "author": "Takagi Tasuku <tasuren@outlook.jp> (https://tasuren.jp/)",
+    "license": "GPL-3.0-or-later",
+    "private": true,
+    "scripts": {
+        "dev": "rspack build --watch",
+        "build": "tsc && rspack build",
+        "all-licenses": "mkdir -p dist/licenses && pnpm licenses ls --prod --json > dist/licenses/js.json && cargo license --tsv --current-dir src-tauri > dist/licenses/rust.csv",
+        "icons": "tauri icon icon/main.png --output src-tauri/icons",
+        "tauri": "tauri",
+        "cargo": "cargo +nightly -Z unstable-options -C src-tauri"
+    },
+    "dependencies": {
+        "@tauri-apps/api": "^2.0.0"
+    },
+    "devDependencies": {
+        "@rspack/cli": "^1.6.7",
+        "@tauri-apps/cli": "^2.9.6",
+        "@types/node": "^25.0.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+    }
 }
