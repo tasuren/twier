@@ -54,7 +54,7 @@ function removeNavigation() {
 
 /** 設定画面にリポジトリへのリンクを表示するボタンを付ける。 */
 const ACKNOWLEDGEMENTS =
-	"https://github.com/tasuren/twier/blob/6fb16eecff20acbf1031d52252b49e42a005532d/README.md#acknowledgments";
+	"https://github.com/tasuren/twier/blob/4eba2de8a192c1eaa43853cb238c18938fad826f/README.md#acknowledgments";
 
 function addThirdPartyLicensesButton(containerElement: HTMLDivElement) {
 	if (!document.getElementById("twier-info"))

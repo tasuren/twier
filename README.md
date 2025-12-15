@@ -38,8 +38,8 @@ Unfortunately, I don't know how to disable this alert...
 
 ## Acknowledgments
 
-- [JavaScript dependencies](third-party-licenses/js.json)
-- [Rust dependencies](third-party-licenses/rust.csv)
+- [JavaScript dependencies](https://github.com/tasuren/twier/blob/8f56f23e055a06c7292dfdd048159e960f24a7c8/third-party-licenses/js.json)
+- [Rust dependencies](https://github.com/tasuren/twier/blob/8f56f23e055a06c7292dfdd048159e960f24a7c8/third-party-licenses/rust.csv)
 
 ## License
 
