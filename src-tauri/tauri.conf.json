@@ -19,7 +19,10 @@
         "copyright": "(c) 2023 Takagi Tasuku",
         "license": "GPL-3.0-or-later",
         "shortDescription": "A native X client dedicated to posting.",
-        "category": "SocialNetworking"
+        "category": "SocialNetworking",
+        "macOS": {
+            "signingIdentity": "-"
+        }
     },
     "productName": "Twier",
     "version": "0.2.0",
