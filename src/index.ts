@@ -52,7 +52,7 @@ function removeNavigation() {
 	return false;
 }
 
-/** 設定画面にサードパーティライセンスを表示するボタンを付ける。 */
+/** 設定画面にリポジトリへのリンクを表示するボタンを付ける。 */
 function addThirdPartyLicensesButton(containerElement: HTMLDivElement) {
 	if (!document.getElementById("twier-info"))
 		for (const element of containerElement.getElementsByTagName("div"))
@@ -62,8 +62,7 @@ function addThirdPartyLicensesButton(containerElement: HTMLDivElement) {
 				division.id = "twier-info";
 
 				const anchor = document.createElement("a");
-				anchor.href =
-					"https://github.com/tasuren/twier/blob/main/README.md#acknowledgment";
+				anchor.href = "https://github.com/tasuren/twier/blob/main/README.md";
 				if (element.lastElementChild) {
 					anchor.className = element.lastElementChild.className;
 					anchor.setAttribute(
@@ -71,7 +70,7 @@ function addThirdPartyLicensesButton(containerElement: HTMLDivElement) {
 						element.lastElementChild.getAttribute("style") as string,
 					);
 				}
-				anchor.innerText = "Twier Acknowledgements";
+				anchor.innerText = "See twier repository";
 
 				division.appendChild(anchor);
 				element.appendChild(division);
