@@ -1,54 +1,45 @@
 {
-  "build": {
-    "beforeDevCommand": "pnpm dev",
-    "beforeBuildCommand": "pnpm build",
-    "devPath": "../dist",
-    "distDir": "../dist"
-  },
-  "package": {
-    "productName": "Twier"
-  },
-  "tauri": {
-    "allowlist": {
-      "path": {
-        "all": true
-      }
-    },
-    "security": {
-      "dangerousRemoteDomainIpcAccess": [
-        {"domain": "x.com", "windows": ["main"], "enableTauriAPI": true}
-      ]
+    "$schema": "https://schema.tauri.app/config/2",
+    "build": {
+        "beforeDevCommand": "bun dev",
+        "beforeBuildCommand": "bun run build",
+        "frontendDist": "../dist"
     },
     "bundle": {
-      "active": true,
-      "targets": "all",
-      "identifier": "jp.tasuren.twier",
-      "publisher": "Takagi Tasuku",
-      "copyright": "(c) 2023 Takagi Tasuku",
-      "shortDescription": "A native X client dedicated to posting.",
-      "category": "SocialNetworking",
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ]
+        "active": true,
+        "targets": "all",
+        "icon": [
+            "icons/macOS/32x32.png",
+            "icons/macOS/128x128.png",
+            "icons/macOS/128x128@2x.png",
+            "icons/icon.icns",
+            "icons/macOS/icon.ico"
+        ],
+        "publisher": "Takagi Tasuku",
+        "copyright": "(c) 2023 Takagi Tasuku",
+        "license": "GPL-3.0-or-later",
+        "shortDescription": "A native X client dedicated to posting.",
+        "category": "SocialNetworking"
     },
-    "windows": [
-      {
-        "fullscreen": false,
-        "resizable": true,
-        "title": "Twier",
-        "width": 600,
-        "height": 400,
-        "url": "https://x.com/settings",
-        "fileDropEnabled": false
-      }
-    ],
-    "systemTray": {
-      "iconPath": "icons/icon.ico",
-      "title": "Oh, hi."
+    "productName": "Twier",
+    "version": "0.2.0",
+    "mainBinaryName": "Twier",
+    "identifier": "jp.tasuren.twier",
+    "plugins": {},
+    "app": {
+        "windows": [
+            {
+                "fullscreen": false,
+                "resizable": true,
+                "title": "Twier",
+                "width": 600,
+                "height": 400,
+                "url": "https://x.com/settings",
+                "useHttpsScheme": true,
+                "dragDropEnabled": false,
+                "titleBarStyle": "Visible"
+            }
+        ],
+        "security": {}
     }
-  }
 }

@@ -1,18 +1,15 @@
 [package]
 name = "twier-backend"
-description = "The backend for twier"
 authors = ["Takagi Tasuku <tasuren@outlook.jp>"]
-license-file = "../LICENSE"
-edition = "2021"
-version = "0.1.3"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "GPL-3.0-or-later"
+publish = false
+edition = "2024"
 
 [build-dependencies]
-tauri-build = { version = "1.5.3", features = [] }
+tauri-build = { version = "2", features = [] }
 
 [dependencies]
-tauri = { version = "1.6.8", features = [ "path-all", "system-tray", "devtools"] }
+tauri = { version = "2", features = ["tray-icon", "devtools"] }
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem

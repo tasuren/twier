@@ -12,7 +12,7 @@ const USER_AGENT: &str = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleW
 
 /// To open directory. The reason this necessary is this: https://github.com/tauri-apps/tauri/issues/5893
 #[command]
-fn open_directory(path: String) {
+async fn open_directory(path: String) {
     #[cfg(target_os = "windows")]
     let command_name = "explorer";
     #[cfg(target_os = "macos")]
@@ -20,12 +20,14 @@ fn open_directory(path: String) {
     #[cfg(target_os = "linux")]
     let command_name = "xdg-open";
 
-    {
-        Command::new(command_name)
+    _ = tauri::async_runtime::spawn_blocking(move || {
+        _ = Command::new(command_name)
             .arg(path)
             .spawn()
-            .expect("Failed to open folder");
-    }
+            .expect("Failed to open folder")
+            .wait();
+    })
+    .await;
 }
 
 /// Just printing to debug.
@@ -37,22 +39,22 @@ fn print(text: String) {
 fn main() {
     Builder::default()
         .invoke_handler(generate_handler![print, open_directory])
-        .on_page_load(|window, _| {
-            injector::inject(&window);
+        .on_page_load(|webview, _| {
+            injector::inject(webview);
 
             if env::var("DEVTOOLS")
                 .ok()
                 .map(|v| !v.is_empty())
                 .unwrap_or(false)
             {
-                window.open_devtools();
+                webview.open_devtools();
             }
         })
         .run({
             #[cfg(target_os = "macos")]
             {
                 let mut ctx = generate_context!();
-                for window in ctx.config_mut().tauri.windows.iter_mut() {
+                for window in ctx.config_mut().app.windows.iter_mut() {
                     window.user_agent = Some(USER_AGENT.to_string());
                 }
                 ctx

@@ -1,0 +1,7 @@
+{
+    "identifier": "main",
+    "description": "Main window permissions",
+    "local": true,
+    "windows": ["main"],
+    "permissions": []
+}

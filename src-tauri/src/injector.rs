@@ -9,7 +9,7 @@ macro_rules! load_script {
 }
 
 #[inline]
-pub fn inject(window: &tauri::Window) {
+pub fn inject(window: &tauri::Webview) {
     // Inject the script to modify x web page.
-    window.eval(&load_script!("../dist/main.js")).unwrap();
+    window.eval(load_script!("../dist/main.js")).unwrap();
 }
